@@ -23,9 +23,9 @@ function nightMode(){
         document.body.style.backgroundColor='#FFF';
 
     }
-
-
 }
+
+
 function Egg(){
 
     tekst = "Jou moeder is lelijk";

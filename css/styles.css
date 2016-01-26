@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FFF;
+}
+
+.material-top-header {
+    height: 120px;
+    background-color: #00b8d4;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    box-shadow: 0px 2px 4px #3c3c3c;
+    z-index: 1;
+
+}
+
+#main-title{
+    bottom: 0px;
+    z-index: 1;
+    font-size: 35px;
+    color: #ffffff;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+
+}
+
+
+#container{
+    width: 100%;
+    margin-top: 130px;
+    height: 100%;
+}
+
+.card{
+    width: 85%;
+    background-color: #ffffff;
+    color: #fff;
+    height: 100%;
+    max-height: 520px;
+    box-shadow: 0px 1px 4px #4c4c4c;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 14px;
+
+}
+
+.sub-text{
+    color: rgba(0,0,0,.5);
+    font-size: 14px;
+}
+
+.card-title{
+    background-color: #00b8d4;
+    height: 175px;
+    z-index: 1;
+}
+
+.card-text-title{
+    font-size: 24px;
+    line-height: 28px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    left: 20px;
+    position: relative;
+    top:135px;
+    bottom: 0;
+}
+
+.sub-text{
+    padding: 10px;
+    font-size: 15px;
+    font-family: "Arial";
+}
+
+.card-menu{
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 5px;
+}
+
+.card-button{
+    color: #00b8d4;
+    border: none;
+    width: 125px;
+    height: 35px;
+    background-color: rgba(0,0,0,0);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 36px;
+    left: 10px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.main .base {
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    width: 125px;
+    height: 35px;
+
+
+
+}
+.main .base a{
+    font-size: 18px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    padding-top: 4px;
+    padding-left: 4px;
+    font-weight: 300;
+    color: #00b8d4;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    z-index: 0;
+}
+
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+    display: block; position: absolute;
+    background: rgba(0,184,212,.3);
+    border-radius: 100%;
+    transform: scale(0);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {opacity: 0; transform: scale(2.5);}
+}
