@@ -5,12 +5,13 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="jquery/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
 </head>
 <body>
 
 <style>
-
 
     *{
         padding: 0;
@@ -250,11 +251,27 @@
         }
 
         x = e.pageX - parent.offset().left - ink.width()/2;
-        y = e.pageY - parent.offset().top - ink.height()/2              ;
+        y = e.pageY - parent.offset().top - ink.height()/2;
 
 
         ink.css({top: y+'px', left: x+'px'}).addClass("animate");
     })
+</script>
+
+<script>
+    document.onload=changeTheme();
+    function changeTheme(){
+        var date = new Date();
+        var hours = date.getHours();
+
+        if (hours >20 && hours<9){
+            document.getElementsByClassName("main-title").innerHTML="<p>TESSSSSSSSSSSSSSSSST</p>";
+        }
+
+        else{
+            document.getElementsByClassName("main-title").innerHTML="<p>okeeeeeeeeeeeeeeeee</p>";
+        }
+    }
 </script>
 
 
