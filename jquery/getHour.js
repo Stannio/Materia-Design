@@ -26,3 +26,14 @@ function nightMode(){
 
 
 }
+function Egg(){
+
+    tekst = "Jou moeder is lelijk";
+
+    document.getElementById('lol').innerHTML = "Jou moeder is lelijk";
+    document.getElementById('lol2').innerHTML = "Jou moeder is lelijk";
+    document.getElementById('lol3').innerHTML = "Jou moeder is lelijk";
+    document.getElementById('lol4').innerHTML = "Jou moeder is lelijk";
+
+
+}
