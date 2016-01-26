@@ -8,13 +8,13 @@ function nightMode(){
     if (Hour >= 20)
     {
 
-        document.body.style.backgroundColor='#000';
+        document.body.style.backgroundColor='#000d1a';
 
     }
     else if(Hour <= 6)
     {
 
-        document.body.style.backgroundColor='#000';
+        document.body.style.backgroundColor='#000d1a';
 
     }
     else
