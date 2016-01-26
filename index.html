@@ -15,9 +15,32 @@
         margin: 0;
     }
 
+    .material-top-header {
+        height: 120px;
+        background-color: #00b8d4;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        text-align: center;
+        line-height: 120px;
+
+    }
+
+    #main-title{
+        bottom: 0px;
+        z-index: 1;
+        font-size: 35px;
+        color: #ffffff;
+        font-family: "Roboto","Helvetica","Arial",sans-serif;
+
+    }
+
+
     #container{
         margin: 0 auto;
-        width: 95%;
+        margin-top: 200px;
+        width: 96%;
+        height: 98%;
     }
 
     .card{
@@ -29,6 +52,8 @@
         margin: 20px;
         max-height: 500px;
         box-shadow: 0px 1px 4px #4c4c4c;
+        z-index: 1;
+
     }
 
     .sub-text{
@@ -80,12 +105,8 @@
         cursor: pointer;
     }
 
-    .card-button::selection{
-        border: none;
-        outline: 0;
-    }
 
-    #main #base {
+    .main .base {
         list-style-type: none;
         position: relative;
         overflow: hidden;
@@ -95,7 +116,7 @@
 
 
     }
-    #main #base a{
+    .main .base a{
         font-size: 18px;
         font-family: Roboto;
         padding-top: 4px;
@@ -127,18 +148,23 @@
 
 
 </style>
+
+<div class="material-top-header">
+    <h1 id="main-title">Welkom bij Materia-Design!</h1>
+</div>
+
 <div id="container">
 <div class="card">
     <div class="card-title">
-        <h2 class="card-text-title">Ibrahim Demirkiran</h2>
+        <h2 class="card-text-title">Lorem Ipsum</h2>
     </div>
     <div class="sub-text">
         Student applicatie ontwikkelaar, Gedreven en geïnteresseerd.
     </div>
     <div class="card-menu">
-        <ul id="main">
-        <li id="base">
-            <a href="#" id="card-button">
+        <ul class="main">
+        <li class="base">
+            <a href="#" class="card-button">
                 Meer info
             </a>
         </li>
@@ -154,7 +180,13 @@
         Student applicatie ontwikkelaar, Gedreven en geïnteresseerd.
     </div>
     <div class="card-menu">
-        <button class="card-button">Meer info</button>
+        <ul class="main">
+            <li class="base">
+                <a href="#" class="card-button">
+                    Meer info
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 
@@ -166,7 +198,13 @@
         Student applicatie ontwikkelaar, Gedreven en geïnteresseerd.
     </div>
     <div class="card-menu">
-        <button class="card-button">Meer info</button>
+        <ul class="main">
+            <li class="base">
+                <a href="#" class="card-button">
+                    Meer info
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 
@@ -178,14 +216,20 @@
         Student applicatie ontwikkelaar, Gedreven en geïnteresseerd
     </div>
     <div class="card-menu">
-        <button class="card-button">Meer info</button>
+        <ul class="main">
+            <li class="base">
+                <a href="#" class="card-button">
+                    Meer info
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
 </div>
 
 <script>
     var parent, ink, d, x, y;
-    $("#card-button").click(function(e){
+    $(".card-button").click(function(e){
         parent = $(this).parent();
         //create .ink element if it doesn't exist
         if(parent.find(".ink").length == 0)
