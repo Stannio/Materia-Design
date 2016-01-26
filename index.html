@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="jquery/jquery.js"></script>
 
 </head>
 <body>
@@ -67,6 +68,7 @@
         color: #00b8d4;
         border: none;
         width: 125px;
+        height: 35px;
         background-color: rgba(0,0,0,0);
         font-weight: 500;
         font-size: 14px;
@@ -74,16 +76,54 @@
         left: 10px;
         position: relative;
         z-index: 0;
-    }
-
-    .card-button:hover{
-        background-color: rgba(0,0,0,.1);
+        overflow: hidden;
+        cursor: pointer;
     }
 
     .card-button::selection{
         border: none;
         outline: 0;
     }
+
+    #main #base {
+        list-style-type: none;
+        position: relative;
+        overflow: hidden;
+        width: 125px;
+        height: 35px;
+
+
+
+    }
+    #main #base a{
+        font-size: 18px;
+        font-family: Roboto;
+        padding-top: 4px;
+        padding-left: 4px;
+        font-weight: 300;
+        color: #00b8d4;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        z-index: 0;
+    }
+
+    /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+    .ink {
+        display: block; position: absolute;
+        background: rgba(0,184,212,.3);
+        border-radius: 100%;
+        transform: scale(0);
+    }
+    /*animation effect*/
+    .ink.animate {animation: ripple 0.65s linear;}
+    @keyframes ripple {
+        /*scale the element to 250% to safely cover the entire link and fade it out*/
+        100% {opacity: 0; transform: scale(2.5);}
+    }
+
 
 
 </style>
@@ -96,7 +136,13 @@
         Student applicatie ontwikkelaar, Gedreven en geïnteresseerd.
     </div>
     <div class="card-menu">
-        <button class="card-button">Meer info</button>
+        <ul id="main">
+        <li id="base">
+            <a href="#" id="card-button">
+                Meer info
+            </a>
+        </li>
+        </ul>
     </div>
 </div>
 
@@ -136,6 +182,33 @@
     </div>
 </div>
 </div>
+
+<script>
+    var parent, ink, d, x, y;
+    $("#card-button").click(function(e){
+        parent = $(this).parent();
+        //create .ink element if it doesn't exist
+        if(parent.find(".ink").length == 0)
+            parent.prepend("<span class='ink'></span>");
+
+        ink = parent.find(".ink");
+        //incase of quick double clicks stop the previous animation
+        ink.removeClass("animate");
+
+        //set size of .ink
+        if(!ink.height() && !ink.width())
+        {
+            d = Math.max(parent.outerWidth(), parent.outerHeight());
+            ink.css({height: d, width: d});
+        }
+
+        x = e.pageX - parent.offset().left - ink.width()/2;
+        y = e.pageY - parent.offset().top - ink.height()/2              ;
+
+
+        ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+    })
+</script>
 
 
 </body>
