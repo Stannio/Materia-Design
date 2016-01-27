@@ -20,7 +20,7 @@ function nightMode(){
     else
     {
 
-        document.body.style.backgroundColor='#FFF';
+        document.body.style.backgroundColor='#e9eaed';
 
     }
 }
@@ -30,10 +30,10 @@ function Egg(){
 
     tekst = "Jou moeder is lelijk";
 
-    document.getElementById('lol').innerHTML = "Jou moeder is lelijk";
-    document.getElementById('lol2').innerHTML = "Jou moeder is lelijk";
-    document.getElementById('lol3').innerHTML = "Jou moeder is lelijk";
-    document.getElementById('lol4').innerHTML = "Jou moeder is lelijk";
+    document.getElementById('lol').innerHTML = "Jouw moeder is lelijk";
+    document.getElementById('lol2').innerHTML = "Jouw moeder is lelijk";
+    document.getElementById('lol3').innerHTML = "Jouw moeder is lelijk";
+    document.getElementById('lol4').innerHTML = "Jouw moeder is lelijk";
 
 
 }
