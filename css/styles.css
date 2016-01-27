@@ -14,7 +14,7 @@ body{
     top: 0;
     text-align: center;
     line-height: 120px;
-    box-shadow: 0px 2px 4px #3c3c3c;
+    box-shadow: 0px 2px 8px #4c4c4c;
     z-index: 1;
 
 }
@@ -41,11 +41,16 @@ body{
     color: #fff;
     height: 100%;
     max-height: 520px;
-    box-shadow: 0px 1px 4px #4c4c4c;
+    box-shadow: 0px 2px 4px #4c4c4c;
     margin-left:auto;
     margin-right: auto;
     margin-bottom: 14px;
+}
 
+.card:hover{
+    box-shadow: 0px 3px 4px #4c4c4c;
+    transform: scale(1.003);
+    transition-delay: 0.15s;
 }
 
 .sub-text{
