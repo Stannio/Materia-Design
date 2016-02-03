@@ -30,10 +30,10 @@ function Egg(){
 
     tekst = "Jou moeder is lelijk";
 
-    document.getElementById('lol').innerHTML = "Jouw moeder is lelijk";
-    document.getElementById('lol2').innerHTML = "Jouw moeder is lelijk";
-    document.getElementById('lol3').innerHTML = "Jouw moeder is lelijk";
-    document.getElementById('lol4').innerHTML = "Jouw moeder is lelijk";
+    document.getElementById('lol').innerHTML = "Dummybutton";
+    document.getElementById('lol2').innerHTML = "Dummybutton";
+    document.getElementById('lol3').innerHTML = "Dummybutton";
+    document.getElementById('lol4').innerHTML = "Dummybutton";
 
 
 }

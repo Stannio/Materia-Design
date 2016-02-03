@@ -4,22 +4,24 @@
 }
 body{
     background-color: #e9eaed;
+    min-width:450px;
 }
 
 .material-top-header {
-    height: 120px;
+    min-height: 120px;
+    max-height: 350px;
     background-color: #00b8d4;
     position: fixed;
     width: 100%;
     top: 0;
     text-align: center;
-    line-height: 120px;
     box-shadow: 0px 2px 8px #4c4c4c;
     z-index: 1;
 }
 
 #main-title{
     bottom: 0px;
+    margin-top: 20px;
     z-index: 1;
     font-size: 35px;
     color: #ffffff;
@@ -39,7 +41,7 @@ body{
     background-color: #ffffff;
     color: #fff;
     height: 100%;
-    max-height: 520px;
+    max-height: 1200px;
     box-shadow: 0px 2px 4px #4c4c4c;
     margin-left:auto;
     margin-right: auto;
@@ -47,8 +49,8 @@ body{
 }
 
 .card:hover{
-    box-shadow: 0px 3px 4px #4c4c4c;
-    transform: scale(1.003);
+    box-shadow: 0px 3px 6px #4c4c4c;
+
     transition-delay: 0.15s;
 }
 
